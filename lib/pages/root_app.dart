@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_telegram_clone_app/pages/chat_page.dart';
 import 'package:flutter_telegram_clone_app/pages/contact_page.dart';
+import 'package:flutter_telegram_clone_app/pages/settings_page.dart';
 import 'package:flutter_telegram_clone_app/theme/colors.dart';
 
 class RootApp extends StatefulWidget {
@@ -27,16 +28,7 @@ class _RootAppState extends State<RootApp> {
   Widget getBody() {
     return IndexedStack(
       index: pageIndex,
-      children: const [
-        ContactPage(),
-        ChatPage(),
-        Center(
-          child: Text(
-            'Settings',
-            style: TextStyle(color: white),
-          ),
-        )
-      ],
+      children: const [ContactPage(), ChatPage(), SettingPage()],
     );
   }
 
